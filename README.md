@@ -270,9 +270,25 @@ Known limitations: about one price observation per minute; no historical order-b
 
 ---
 
-## Disclaimer
+## Live Trading Pipeline
 
-Educational and research software. It places no orders and has no live trading path. The measured conclusion is that this strategy has **no demonstrated edge** — do not risk money on it. Prediction market trading can lose your entire stake.
+This project is built for **live market operation** via paper trading on real Polymarket BTC 5-minute Up/Down markets:
+
+- Connects to live Polymarket market data (Gamma + CLOB)
+- Makes timed decisions before each market close
+- Applies the AI confidence filter and entry price band in real time
+- Settles trades from actual market resolutions
+- Tracks portfolio balance, stake sizing, and trade history
+- Ships with a Streamlit dashboard for monitoring results
+
+Use paper trading to validate the full live loop before considering any real-money integration:
+
+```bash
+python scripts/run_paper_trading.py --dry-run
+python scripts/run_paper_trading.py --markets 5
+```
+
+The current bot path is paper trading only (no order placement). Treat live real-money use as a separate integration step and validate against the backtest results first.
 
 ## License
 
