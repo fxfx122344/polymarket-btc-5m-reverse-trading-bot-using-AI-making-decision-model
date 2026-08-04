@@ -16,7 +16,6 @@ build/
 *.log
 .DS_Store
 .idea/
-.vscode/
 
 # Trained models are reproducible from scripts/train_model.py
 models/*.pkl
