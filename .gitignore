@@ -17,5 +17,10 @@ build/
 .DS_Store
 .idea/
 .vscode/
+
+# Trained models are reproducible from scripts/train_model.py
 models/*.pkl
 !models/.gitkeep
+
+# Large downloaded market data; reproducible via scripts/fetch_history.py
+data/raw/
